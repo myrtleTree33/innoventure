@@ -1,0 +1,32 @@
+/*****************************************************************************/
+/* Home: Style */
+/*****************************************************************************/
+
+.home {
+}
+
+section.page-leader {
+  min-height: 80%;
+  background: $blue;
+  padding-top: #{2 * $pt}em;
+}
+
+h1.leader {
+  color: #fff;
+}
+
+h2.leader-slogan {
+  color: #fff;
+  // font-size: #{$gt * 1.7}em;
+}
+
+p.leader-details {
+  margin-top: #{$gt * 1.1}em;
+  color: #fff;
+  font-size: #{$gt * .8}em;
+}
+
+a.outline {
+  border: 1px solid white;
+  background: rgba(0,0,0,0);
+}

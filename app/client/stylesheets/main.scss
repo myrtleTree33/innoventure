@@ -1,0 +1,135 @@
+@charset "UTF-8";
+
+@import "normalize.scss";
+
+//local Foundation settings file. Copy it from git repo -> scss/foundation/_settings.scss near main .scss file. Then Uncomment the line below.
+@import "settings";
+
+@import "foundation/components/grid.scss";
+@import "foundation/components/accordion.scss";
+@import "foundation/components/alert-boxes.scss";
+@import "foundation/components/block-grid.scss";
+@import "foundation/components/breadcrumbs.scss";
+@import "foundation/components/button-groups.scss";
+@import "foundation/components/buttons.scss";
+@import "foundation/components/clearing.scss";
+@import "foundation/components/dropdown.scss";
+@import "foundation/components/dropdown-buttons.scss";
+@import "foundation/components/flex-video.scss";
+@import "foundation/components/forms.scss";
+@import "foundation/components/icon-bar.scss";
+@import "foundation/components/inline-lists.scss";
+@import "foundation/components/joyride.scss";
+@import "foundation/components/keystrokes.scss";
+@import "foundation/components/labels.scss";
+@import "foundation/components/magellan.scss";
+@import "foundation/components/orbit.scss";
+@import "foundation/components/pagination.scss";
+@import "foundation/components/panels.scss";
+@import "foundation/components/pricing-tables.scss";
+@import "foundation/components/progress-bars.scss";
+@import "foundation/components/range-slider.scss";
+@import "foundation/components/reveal.scss";
+@import "foundation/components/side-nav.scss";
+@import "foundation/components/split-buttons.scss";
+@import "foundation/components/sub-nav.scss";
+@import "foundation/components/switches.scss";
+@import "foundation/components/tables.scss";
+@import "foundation/components/tabs.scss";
+@import "foundation/components/thumbs.scss";
+@import "foundation/components/tooltips.scss";
+@import "foundation/components/top-bar.scss";
+@import "foundation/components/type.scss";
+@import "foundation/components/offcanvas.scss";
+@import "foundation/components/visibility.scss";
+
+// your project styles goes here
+
+/*****************************************************************************/
+/* main: Style */
+/*****************************************************************************/
+
+$pt: 1.618;
+
+// Color schemes ----------
+$footer-bg: #333;
+$blue: #2185c5;
+$green: #cdff00;
+$pink: #ff3b77;
+$grey-med: #52656b;
+
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300,400);
+
+@mixin set-text {
+  font-family: 'Open Sans';
+  font-weight: 300;
+}
+
+.valign-wrapper {
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+
+div.center
+{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+div.center-text {
+  text-align: center;
+}
+
+.main {
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+  div.nav {
+    min-width: 100%;
+    background: #222;
+  }
+}
+
+@media only screen  and (min-width : 1224px) {
+  div.nav {
+    z-index: 9998;
+    position: absolute;
+    min-width: 100%;
+  }
+
+  .top-bar {
+    padding-bottom: #{$pt * 2}em;
+    border-bottom:1px solid #fff;
+  }
+}
+
+body {
+  background: #fff;
+  @include set-text;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  @include set-text;
+}
+
+h1 {
+  // font-size: #{$gt * 3}em;
+}
+
+footer {
+  position: fixed;
+  background: $footer-bg;
+  // min-height: 50px;
+  padding: 2em;
+  min-width: 100%;
+  padding-top: #{.5 * $pt}em;
+  bottom: 0px;
+}
+
+.footer-icon {
+  padding: 0 #{$pt / 4}em;
+}
+
+@import "../templates/home/home";
