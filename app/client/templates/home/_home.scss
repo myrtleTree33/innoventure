@@ -5,6 +5,10 @@
 .home {
 }
 
+section.page {
+  padding: #{$gt}rem 0;
+}
+
 section.page-leader {
   min-height: 80%;
   background: $blue;
@@ -29,4 +33,44 @@ p.leader-details {
 a.outline {
   border: 1px solid white;
   background: rgba(0,0,0,0);
+}
+
+// -----------------------------------
+
+section.page-sponsor {
+  min-height: 20%;
+  background: #fff;
+}
+
+// -----------------------------------
+
+section.page-whatis {
+  min-height: 80%;
+  background: #fff;
+}
+
+.whatis-explain {
+  max-width: #{20 * $gt}rem
+}
+
+.margin-med {
+  margin-bottom: #{1 * $gt}rem;
+}
+
+.margin-large {
+  margin-bottom: #{3 * $gt}rem;
+}
+
+// -----------------------------------
+
+section.page-stats {
+  min-height: 20%;
+  background: $blue;
+}
+
+// -----------------------------------
+
+section.page-slogan2 {
+  min-height: 30%;
+  background: #fff;
 }

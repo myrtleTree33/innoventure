@@ -68,6 +68,21 @@ $grey-med: #52656b;
 .valign-wrapper {
   display:flex;
   align-items: center;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-left {
+  justify-content: flex-start;
+}
+
+.flex-right {
+  justify-content: flex-end;
+}
+
+.flex-center {
   justify-content: center;
 }
 
@@ -89,6 +104,10 @@ div.center-text {
   div.nav {
     min-width: 100%;
     background: #222;
+  }
+
+  .row {
+    padding: 0 #{$gt}em !important;
   }
 }
 
@@ -119,17 +138,26 @@ h1 {
 }
 
 footer {
-  position: fixed;
+  //position: fixed;
   background: $footer-bg;
-  // min-height: 50px;
+  min-height: #{80 * $gt}px;
   padding: 2em;
   min-width: 100%;
   padding-top: #{.5 * $pt}em;
-  bottom: 0px;
+  //bottom: 0px;
 }
 
 .footer-icon {
   padding: 0 #{$pt / 4}em;
+}
+
+.footer-text {
+  color: #fff;
+
+}
+
+.text-white {
+  color: #fff;
 }
 
 @import "../templates/home/home";
