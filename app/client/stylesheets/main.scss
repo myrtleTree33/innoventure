@@ -97,6 +97,10 @@ div.center-text {
   text-align: center;
 }
 
+div.right-text {
+  text-align: right;
+}
+
 .main {
 }
 
@@ -158,6 +162,14 @@ footer {
 
 .text-white {
   color: #fff;
+}
+
+.text-blue {
+  color: $blue;
+}
+
+.text-upper {
+  text-transform: uppercase;
 }
 
 @import "../templates/home/home";
