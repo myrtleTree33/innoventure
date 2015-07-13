@@ -9,9 +9,17 @@ section.page {
   padding: #{$gt}rem 0;
 }
 
+@mixin background-splash($filepath, $fallback-color) {
+  background-image: url($filepath);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% auto;
+  background-color: $fallback-color;
+}
+
 section.page-leader {
+  @include background-splash('img/cover.jpg', $blue);
   min-height: 80%;
-  background: $blue;
   padding-top: #{2 * $pt}em;
 }
 
@@ -45,7 +53,7 @@ section.page-sponsor {
 // -----------------------------------
 
 section.page-whatis {
-  min-height: 80%;
+  min-height: 100%;
   background: #fff;
 }
 

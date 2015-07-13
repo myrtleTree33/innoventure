@@ -2,6 +2,12 @@ Meteor.startup(function() {
   loadTwitter();
 });
 
+function configEmail() {
+  var username = null,
+  password = null;
+  process.env.MAIL_URL = 'smtp://' + username + ':' + password + '@smtp.gmail.com:587/';
+};
+
 function loadTwitter() {
   var twitter = new Twitter({
     consumer_key: Meteor.settings.twitter_consumer_key,

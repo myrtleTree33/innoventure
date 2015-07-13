@@ -15,7 +15,7 @@
    id="svg2"
    version="1.1"
    inkscape:version="0.48.4 r9939"
-   sodipodi:docname="events.svg">
+   sodipodi:docname="layout.svg">
   <defs
      id="defs4">
     <mask
@@ -37,11 +37,11 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.55645331"
-     inkscape:cx="510.15141"
-     inkscape:cy="2378.1693"
+     inkscape:zoom="1.5738876"
+     inkscape:cx="366.18061"
+     inkscape:cy="2395.7793"
      inkscape:document-units="px"
-     inkscape:current-layer="layer4"
+     inkscape:current-layer="layer2"
      showgrid="false"
      inkscape:window-width="1855"
      inkscape:window-height="1056"
@@ -81,7 +81,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -249,8 +249,7 @@
      inkscape:groupmode="layer"
      id="layer2"
      inkscape:label="bg"
-     transform="translate(2.8987066e-5,1949.0279)"
-     sodipodi:insensitive="true">
+     transform="translate(2.8987066e-5,1949.0279)">
     <image
        y="0.66218263"
        x="0"
