@@ -104,7 +104,14 @@ div.right-text {
 .main {
 }
 
+/* For mobile */
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+
+  // remove all background images if mobile
+  body, section {
+    background-image: none !important;
+  }
+
   div.nav {
     min-width: 100%;
     background: #222;
@@ -115,6 +122,7 @@ div.right-text {
   }
 }
 
+/* For laptops and tablets */
 @media only screen  and (min-width : 1224px) {
   div.nav {
     z-index: 9998;
