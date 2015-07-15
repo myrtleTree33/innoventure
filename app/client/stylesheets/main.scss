@@ -104,6 +104,8 @@ div.right-text {
 .main {
 }
 
+img { -ms-interpolation-mode: bicubic; image-rendering: -moz-crisp-edges; }
+
 /* For mobile */
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
 
