@@ -4,7 +4,7 @@
     <nav class="top-bar" data-topbar role="navigation">
       <ul class="title-area">
         <li class="name">
-          <h1><a href="#">Innoventure</a></h1>
+          <h1><a href="/">Innoventure</a></h1>
         </li>
         <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
         <li class="toggle-topbar menu-icon">
@@ -17,7 +17,9 @@
       <section class="top-bar-section">
         <!-- Right Nav Section -->
         <ul class="right">
-          <li><a href="#">Timeline</a></li>
+          <li><a href="challenge">Challenge</a></li>
+          <li><a href="mentors">Mentors</a></li>
+          <li><a href="#">FAQ</a></li>
           <li class="has-dropdown">
             <a href="#">Past events</a>
             <ul class="dropdown">
@@ -25,9 +27,7 @@
               <li><a href="#">2014</a></li>
             </ul>
           </li>
-          <li><a href="#">FAQ</a></li>
-          <li><a href="#">Sponsors</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><a href="contact">Contact</a></li>
         </ul>
 
         <!-- Left Nav Section -->
@@ -37,16 +37,28 @@
     </nav>
   </div>
   {{> yield}}
-  <footer>
-    <div class="large-offset-6 large-6 columns">
-      <div class="valign-wrapper flex-right">
-        <span class="text-white right">
+  <footer class="valign-wrapper">
+    <div class="row flex-center">
+      <section class="large-4 columns">
+        <span class="text-white">
           Copyright (c) Innoventure.
         </span>
-        <img class="footer-icon right" src="img/instagram.png" alt="" />
-        <img class="footer-icon right" src="img/twitter.png" alt="" />
-        <img class="footer-icon right" src="img/facebook.png" alt="" />
-      </div>
+      </section>
+      <section class="large-4 columns">
+      </section>
+      <section class="large-4 columns">
+        <div class="row">
+          <div class="large-12 columns right-text">
+            <img class="footer-icon" src="img/instagram.png" alt="" />
+            <img class="footer-icon" src="img/twitter.png" alt="" />
+            <img class="footer-icon" src="img/facebook.png" alt="" />
+          </div>
+        </div>
+      </section>
     </div>
+    <!-- <div class="large-offset-6 large-6 columns">
+      <div class="valign-wrapper flex-right">
+      </div> -->
+    <!-- </div> -->
   </footer>
 </template>

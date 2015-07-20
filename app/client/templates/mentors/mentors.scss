@@ -1,0 +1,30 @@
+/*****************************************************************************/
+/* Mentors: Style */
+/*****************************************************************************/
+
+$blue: #2185c5;
+$green: #cdff00;
+$pink: #ff3b77;
+$grey-med: #52656b;
+
+$gt: 1.618;
+
+@mixin background-splash($filepath, $fallback-color) {
+  background-image: url($filepath);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% auto;
+  background-color: $fallback-color;
+}
+
+.mentors {
+}
+
+section.mentors {
+  @include background-splash("img/mentors-bg.jpg", $pink);
+  height: 40%;
+}
+
+section.mentors-list {
+  height: 100%;
+}

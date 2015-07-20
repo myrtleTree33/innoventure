@@ -105,7 +105,8 @@ section.page-dates-timeline {
 
 section.page-faq {
   min-height: 70%;
-  background: #fff;
+  // background: #fff;
+  @include background-splash('img/meaning-bg.jpg', #fff);
 }
 
 // -----------------------------------
