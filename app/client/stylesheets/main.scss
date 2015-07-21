@@ -93,7 +93,7 @@ div.center
   margin-right: auto;
 }
 
-div.center-text {
+.center-text {
   text-align: center;
 }
 
@@ -181,5 +181,18 @@ footer {
 .text-upper {
   text-transform: uppercase;
 }
+
+.margin-med {
+  margin-bottom: #{1 * $gt}rem;
+}
+
+.margin-large {
+  margin-bottom: #{3 * $gt}rem;
+}
+
+.margin-larger {
+  margin-bottom: #{5 * $gt}rem;
+}
+
 
 @import "../templates/home/home";
