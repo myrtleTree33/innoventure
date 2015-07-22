@@ -65,3 +65,9 @@ section.card {
   width: 100%;
   @include background-splash("img/profiles/profile-mock.png", #eee);
 }
+
+.mentor-detail {
+  border-left: 4px solid #eee;
+  padding-left: #{$gt}em;
+  margin-bottom: #{$gt * 2}em;
+}

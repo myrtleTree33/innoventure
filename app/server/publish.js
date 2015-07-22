@@ -16,3 +16,7 @@ Meteor.publish('challenge', function (/* args */) {
 Meteor.publish('contact', function (/* args */) {
   return Contact.find();
 });
+
+Meteor.publish('timeline', function (/* args */) {
+  return Timeline.find();
+});

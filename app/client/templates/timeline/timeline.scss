@@ -1,0 +1,259 @@
+/*****************************************************************************/
+/* Timeline: Style */
+/*****************************************************************************/
+.timeline {
+}
+
+$blue: #2185c5;
+$green: #cdff00;
+$pink: #ff3b77;
+$grey-med: #52656b;
+$gt: 1.618;
+
+
+@mixin box-shadow($top, $left, $blur, $color, $inset:"") {
+  -webkit-box-shadow: $top $left $blur $color #{$inset};
+  -moz-box-shadow: $top $left $blur $color #{$inset};
+  box-shadow: $top $left $blur $color #{$inset};
+}
+
+@mixin background-splash($filepath, $fallback-color) {
+  background-image: url($filepath);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% auto;
+  background-color: $fallback-color;
+}
+
+section.timeline {
+  @include background-splash("img/challenge-bg.jpg", $pink);
+  height: 40%;
+}
+
+
+/**
+ * Timeline resource code adapted from
+ * http://codyhouse.co/gem/vertical-timeline/
+ */
+// for the timeline stuff -----------
+.cd-timeline {
+  position: relative;
+  padding: 2em 0;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+@media only screen and (min-width: 1170px) {
+.cd-timeline::before {
+  /* this is the vertical line */
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 18px;
+  height: 100%;
+  width: 4px;
+  background: #d7e4ed;
+}
+}
+
+@media only screen and (min-width: 1170px) {
+  .cd-timeline-content {
+    margin-left: 0;
+    padding: 1.6em;
+    width: 45%;
+    border: 7px solid transparent;
+    border-right: 7px solid white;
+  }
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+  .cd-timeline-content {
+    margin: 0 #{$gt}em;
+  }
+}
+
+
+@media only screen and (min-width: 1170px) {
+  .cd-timeline::before {
+    left: 50%;
+    margin-left: -2px;
+  }
+}
+
+@media only screen and (min-width: 1170px) {
+  .cd-timeline-block:nth-child(even) .cd-timeline-content {
+    float: right;
+  }
+}
+
+.cd-timeline-block:after {
+  margin-bottom: #{$gt * 4}em;
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.cd-timeline-content::before {
+  content: '';
+  position: absolute;
+  top: 16px;
+  right: 100%;
+  height: 200px;
+  width: 200px;
+}
+
+.cd-timeline-content:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+@media only screen and (min-width: 1170px) {
+  .cd-timeline-img {
+    position: relative;
+    top: 0;
+    left: 50%;
+    margin-left: -20px;
+  }
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+  .cd-timeline-img {
+    margin: #{$gt}em auto;
+  }
+}
+
+.cd-timeline-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  box-shadow: 0 0 0 4px white, inset 0 2px 0 rgba(0, 0, 0, 0.08), 0 3px 0 4px rgba(0, 0, 0, 0.05);
+}
+
+.cssanimations .cd-timeline-content.is-hidden {
+  visibility: hidden;
+}
+.cssanimations .cd-timeline-content.bounce-in {
+  visibility: visible;
+  -webkit-animation: cd-bounce-2 0.6s;
+  -moz-animation: cd-bounce-2 0.6s;
+  animation: cd-bounce-2 0.6s;
+}
+
+
+@-webkit-keyframes cd-bounce-2 {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-100px);
+  }
+
+  60% {
+    opacity: 1;
+    -webkit-transform: translateX(20px);
+  }
+
+  100% {
+    -webkit-transform: translateX(0);
+  }
+}
+@-moz-keyframes cd-bounce-2 {
+  0% {
+    opacity: 0;
+    -moz-transform: translateX(-100px);
+  }
+
+  60% {
+    opacity: 1;
+    -moz-transform: translateX(20px);
+  }
+
+  100% {
+    -moz-transform: translateX(0);
+  }
+}
+@keyframes cd-bounce-2 {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-100px);
+    -moz-transform: translateX(-100px);
+    -ms-transform: translateX(-100px);
+    -o-transform: translateX(-100px);
+    transform: translateX(-100px);
+  }
+
+  60% {
+    opacity: 1;
+    -webkit-transform: translateX(20px);
+    -moz-transform: translateX(20px);
+    -ms-transform: translateX(20px);
+    -o-transform: translateX(20px);
+    transform: translateX(20px);
+  }
+
+  100% {
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+@-webkit-keyframes cd-bounce-2-inverse {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(100px);
+  }
+
+  60% {
+    opacity: 1;
+    -webkit-transform: translateX(-20px);
+  }
+
+  100% {
+    -webkit-transform: translateX(0);
+  }
+}
+@-moz-keyframes cd-bounce-2-inverse {
+  0% {
+    opacity: 0;
+    -moz-transform: translateX(100px);
+  }
+
+  60% {
+    opacity: 1;
+    -moz-transform: translateX(-20px);
+  }
+
+  100% {
+    -moz-transform: translateX(0);
+  }
+}
+@keyframes cd-bounce-2-inverse {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(100px);
+    -moz-transform: translateX(100px);
+    -ms-transform: translateX(100px);
+    -o-transform: translateX(100px);
+    transform: translateX(100px);
+  }
+
+  60% {
+    opacity: 1;
+    -webkit-transform: translateX(-20px);
+    -moz-transform: translateX(-20px);
+    -ms-transform: translateX(-20px);
+    -o-transform: translateX(-20px);
+    transform: translateX(-20px);
+  }
+
+  100% {
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+/* End timeline resource code */

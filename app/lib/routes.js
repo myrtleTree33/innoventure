@@ -40,3 +40,10 @@ Router.route('contact', {
   action: 'action',
   where: 'client'
 });
+
+Router.route('timeline', {
+  name: 'timeline',
+  controller: 'TimelineController',
+  action: 'action',
+  where: 'client'
+});
