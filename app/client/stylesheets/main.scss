@@ -57,6 +57,8 @@ $blue: #2185c5;
 $green: #cdff00;
 $pink: #ff3b77;
 $grey-med: #52656b;
+$yellow: #ffe11a;
+$light-grey: #ccc;
 
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:300,400);
 
@@ -175,7 +177,7 @@ footer {
 }
 
 .text-yellow {
-  color: #ffe11a;
+  color: $yellow;
 }
 
 .text-blue {
@@ -183,7 +185,7 @@ footer {
 }
 
 .text-light-grey {
-  color: #ccc;
+  color: $light-grey;
 }
 
 .text-upper {
@@ -191,7 +193,7 @@ footer {
 }
 
 .margin-small {
-  margin-bottom: #{1 * $gt}rem;
+  margin-bottom: #{.5 * $gt}rem;
 }
 
 .margin-med {
@@ -210,5 +212,26 @@ footer {
   font-size: #{$gt * 2}em;
   line-height:20px;
   }
+
+  /* unvisited link */
+
+@mixin style-link($link-color, $visited-color, $hover-color, $active-color) {
+  &:link {
+    color:$link-color;
+  }
+  &:visited {
+    color:$visited-color;
+  }
+  &:hover {
+    color:$hover-color;
+  }
+  &:active {
+    color:$active-color;
+  }
+}
+
+a.footer-link {
+  @include style-link($light-grey,$light-grey, #fff,#fff);
+}
 
 @import "../templates/home/home";

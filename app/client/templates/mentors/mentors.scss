@@ -48,12 +48,19 @@ section.card {
 }
 
 .crop-circle {
-    min-width: 200px;
-    width: 200px;
-    height: 200px;
     border-radius: 100%;
     background: #eee no-repeat center;
     background-size: cover;
+}
+
+.icon-med {
+    width: 200px;
+    height: 200px;
+}
+
+.icon-small {
+    width: 100px;
+    height: 100px;
 }
 
 .profile-1 {

@@ -7,7 +7,7 @@ $green: #cdff00;
 $pink: #ff3b77;
 $grey-med: #52656b;
 $gt: 1.618;
-
+$yellow: #ffe11a;
 
 @mixin box-shadow($top, $left, $blur, $color, $inset:"") {
   -webkit-box-shadow: $top $left $blur $color #{$inset};
@@ -23,6 +23,22 @@ $gt: 1.618;
   background-color: $fallback-color;
 }
 
+@mixin style-link($link-color, $visited-color, $hover-color, $active-color) {
+  &:link {
+    color:$link-color;
+  }
+  &:visited {
+    color:$visited-color;
+  }
+  &:hover {
+    color:$hover-color;
+  }
+  &:active {
+    color:$active-color;
+  }
+}
+
+
 section.contact {
   @include background-splash("img/challenge-bg.jpg", $pink);
   height: 40%;
@@ -31,6 +47,10 @@ section.contact {
 section.contact-content {
   background: #fff;
   min-height: 70%;
+}
+
+a.sns {
+  @include style-link(#000,#000,$yellow,$yellow);
 }
 
 iframe.google-map {
