@@ -1,6 +1,6 @@
 <template name="MasterLayout">
-  <div class="nav">
 
+  <div class="nav">
     <nav class="top-bar" data-topbar role="navigation">
       <ul class="title-area">
         <li class="name">
@@ -13,7 +13,6 @@
           </a>
         </li>
       </ul>
-
       <section class="top-bar-section">
         <!-- Right Nav Section -->
         <ul class="right">
@@ -30,36 +29,27 @@
           </li>
           <li><a href="contact">Contact</a></li>
         </ul>
-
         <!-- Left Nav Section -->
         <ul class="left">
         </ul>
       </section>
     </nav>
   </div>
+
   {{> yield}}
-  <footer class="valign-wrapper">
-    <div class="row flex-center">
-      <section class="large-4 columns">
-        <span class="text-white">
+
+  <footer class="">
+    <div class="row text-light-grey">
+      <div class="large-4 columns">
+        <span class="text-light-grey">
           Copyright (c) Innoventure.
         </span>
-      </section>
-      <section class="large-4 columns">
-      </section>
-      <section class="large-4 columns">
-        <div class="row">
-          <div class="large-12 columns right-text">
-            <img class="footer-icon" src="img/instagram.png" alt="" />
-            <img class="footer-icon" src="img/twitter.png" alt="" />
-            <img class="footer-icon" src="img/facebook.png" alt="" />
-          </div>
-        </div>
-      </section>
+      </div>
+      <div class="large-4 columns">
+      </div>
+      <div class="large-4 columns right-text">
+        <i class="fi-social-facebook large text-light-grey"></i>
+      </div>
     </div>
-    <!-- <div class="large-offset-6 large-6 columns">
-      <div class="valign-wrapper flex-right">
-      </div> -->
-    <!-- </div> -->
   </footer>
 </template>

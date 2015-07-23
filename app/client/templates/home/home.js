@@ -31,6 +31,12 @@ Template.Home.created = function() {
 };
 
 Template.Home.rendered = function() {
+
+  $('.leader-slogan-text').typed({
+    strings: ["Design ^100 / Create ^100 / Disrupt"],
+    typeSpeed: 10
+  });
+
   function isElementInViewport(elem) {
     var $elem = $(elem);
     // Get the scroll position of the page.
@@ -70,6 +76,29 @@ Template.Home.rendered = function() {
     });
   }
 
+  function watchAnim(selector, animName) {
+    checkAnimation(selector, function() {
+      console.log('triggered');
+      $(selector).addClass('animated ' + animName);
+    });
+  };
+
+  var whatIsEntered = false;
+
+  function watchWhatis() {
+    checkAnimation('.whatis-meaning', function() {
+      if (whatIsEntered) {
+        return;
+      }
+      whatIsEntered = true;
+      $('.whatis-meaning').typed({
+        strings: ["[Origin: NUS] An engineering startup event &bull; to pitch ideas &bull; to make something special &bull; to meet people"],
+        typeSpeed: 0
+      });
+    });
+  };
+
+
   // Capture scroll events
   $(window).scroll(function() {
     elemCountUp('#stats-teams', 'stats-teams', 0, 60, 5);
@@ -78,6 +107,13 @@ Template.Home.rendered = function() {
     elemCountUp('#stats-awards', 'stats-awards', 0, 20, 5);
     elemCountUp('#stats-terms', 'stats-terms', 0, 2, 5);
     elemCountUp('#stats-startups', 'stats-startups', 0, 40, 5);
+    watchAnim('.slogan2', 'fadeIn');
+    watchAnim('.header-bootcamps', 'fadeInUp');
+    watchAnim('.header-launch', 'fadeInUp');
+    watchAnim('.header-demo', 'fadeInUp');
+    watchAnim('.proof-quote', 'flipInY');
+    watchAnim('.call-to-action', 'rubberBand');
+    watchWhatis();
   });
 };
 

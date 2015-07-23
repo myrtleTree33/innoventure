@@ -155,9 +155,9 @@ footer {
   //position: fixed;
   background: $footer-bg;
   min-height: #{80 * $gt}px;
-  padding: 2em;
+  // padding: 2em;
   min-width: 100%;
-  padding-top: #{.5 * $pt}em;
+  padding-top: #{1 * $pt}em;
   //bottom: 0px;
 }
 
@@ -174,12 +174,24 @@ footer {
   color: #fff;
 }
 
+.text-yellow {
+  color: #ffe11a;
+}
+
 .text-blue {
   color: $blue;
 }
 
+.text-light-grey {
+  color: #ccc;
+}
+
 .text-upper {
   text-transform: uppercase;
+}
+
+.margin-small {
+  margin-bottom: #{1 * $gt}rem;
 }
 
 .margin-med {
@@ -194,5 +206,9 @@ footer {
   margin-bottom: #{5 * $gt}rem;
 }
 
+.large {
+  font-size: #{$gt * 2}em;
+  line-height:20px;
+  }
 
 @import "../templates/home/home";
