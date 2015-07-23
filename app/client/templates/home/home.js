@@ -16,7 +16,6 @@ Template.Home.helpers({
 /* Home: Lifecycle Hooks */
 /*****************************************************************************/
 Template.Home.created = function() {
-  console.log('got here!');
   setInterval(function() {
     Session.set('currentTweet',
       Tweets
@@ -31,32 +30,31 @@ Template.Home.created = function() {
 
 };
 
-function isElementInViewport(elem) {
-  var $elem = $(elem);
-  // Get the scroll position of the page.
-  var scrollElem = ((navigator.userAgent.toLowerCase().indexOf('webkit') != -1) ? 'body' : 'html');
-  var viewportTop = $(scrollElem).scrollTop();
-  var viewportBottom = viewportTop + $(window).height();
-  // Get the position of the element on the page.
-  var elemTop = Math.round($elem.offset().top);
-  var elemBottom = elemTop + $elem.height();
-  return ((elemTop < viewportBottom) && (elemBottom > viewportTop));
-}
-
-// Check if it's time to start the animation.
-function checkAnimation(selector, actionCb) {
-  var $elem = $(selector);
-  // If the animation has already been started
-  if ($elem.hasClass('start')) return;
-  // Start the animation
-  if (isElementInViewport($elem)) {
-    $elem.addClass('start');
-    actionCb();
-  }
-}
-
-
 Template.Home.rendered = function() {
+  function isElementInViewport(elem) {
+    var $elem = $(elem);
+    // Get the scroll position of the page.
+    var scrollElem = ((navigator.userAgent.toLowerCase().indexOf('webkit') != -1) ? 'body' : 'html');
+    var viewportTop = $(scrollElem).scrollTop();
+    var viewportBottom = viewportTop + $(window).height();
+    // Get the position of the element on the page.
+    var elemTop = Math.round($elem.offset().top);
+    var elemBottom = elemTop + $elem.height();
+    return ((elemTop < viewportBottom) && (elemBottom > viewportTop));
+  }
+
+  // Check if it's time to start the animation.
+  function checkAnimation(selector, actionCb) {
+    var $elem = $(selector);
+    // If the animation has already been started
+    if ($elem.hasClass('start')) return;
+    // Start the animation
+    if (isElementInViewport($elem)) {
+      $elem.addClass('start');
+      actionCb();
+    }
+  }
+
   function elemCountUp(section, id, start, end, duration) {
     var options = {  
       useEasing: true,
@@ -83,4 +81,8 @@ Template.Home.rendered = function() {
   });
 };
 
-Template.Home.destroyed = function() {};
+Template.Home.destroyed = function() {
+  // remove the scroll event so other
+  // templates can use it
+  $(window).unbind('scroll');
+};

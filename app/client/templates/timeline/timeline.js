@@ -38,7 +38,7 @@ Template.Timeline.rendered = function() {
     }
 
     function showBlocks(blocks, offset) {
-      blocks.each(function() {
+      $('.cd-timeline-block').each(function() {
         ($(this).offset().top <= $(window).scrollTop() + $(window).height() * offset && $(this).find('.cd-timeline-img').hasClass('is-hidden')) && $(this).find('.cd-timeline-img, .cd-timeline-content').removeClass('is-hidden').addClass('bounce-in');
       });
     }
@@ -47,4 +47,6 @@ Template.Timeline.rendered = function() {
 
 
 
-Template.Timeline.destroyed = function() {};
+Template.Timeline.destroyed = function() {
+  $(window).unbind('scroll');
+};
