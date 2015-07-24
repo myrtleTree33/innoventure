@@ -29,3 +29,7 @@ section.challenge {
   @include background-splash("img/challenge-bg.jpg", $pink);
   height: 40%;
 }
+
+section.challenge-content {
+  height: 50%;
+}

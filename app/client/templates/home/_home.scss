@@ -13,7 +13,8 @@ section.page {
   background-image: url($filepath);
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 100% auto;
+  // background-size: 100% auto;
+  background-size: cover;
   background-color: $fallback-color;
 }
 
@@ -36,6 +37,15 @@ p.leader-details {
   margin-top: #{$gt * 1.1}em;
   color: #fff;
   font-size: #{$gt * .8}em;
+}
+
+.padding-med {
+  margin: #{$gt}em;
+}
+
+.leader-sponsor-logo {
+  height: #{$gt * 2}em;
+  width: auto;
 }
 
 a.outline {
@@ -121,7 +131,7 @@ section.page-cta {
 // -----------------------------------
 
 section.page-email {
-  min-height: 30%;
+  min-height: 50%;
   background: $blue;
 }
 

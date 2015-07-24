@@ -11,6 +11,11 @@ Router.route('/', {
   where: 'client'
 });
 
+Router.onBeforeAction(function() {
+  GoogleMaps.load();
+  this.next();
+}, { only: ['contact'] });
+
 Router.onAfterAction(function () {
   // to load zurb foundation,
   // requires a couple seconds
