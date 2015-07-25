@@ -19,7 +19,7 @@ $yellow: #ffe11a;
   background-image: url($filepath);
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 100% auto;
+  background-size: cover;
   background-color: $fallback-color;
 }
 
@@ -40,7 +40,7 @@ $yellow: #ffe11a;
 
 
 section.contact {
-  @include background-splash("img/challenge-bg.jpg", $pink);
+  @include background-splash("img/contact.jpg", $pink);
   height: 40%;
 }
 
