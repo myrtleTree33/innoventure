@@ -234,4 +234,12 @@ a.footer-link {
   @include style-link($light-grey,$light-grey, #fff,#fff);
 }
 
+.font-small {
+  font-size: 0.8em;
+}
+
+.font-footer {
+  font-size: 1.4em;
+}
+
 @import "../templates/home/home";

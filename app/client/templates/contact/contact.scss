@@ -40,7 +40,7 @@ $yellow: #ffe11a;
 
 
 section.contact {
-  @include background-splash("img/contact.jpg", $pink);
+  @include background-splash("img/contact.jpg", $blue);
   height: 40%;
 }
 

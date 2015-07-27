@@ -5,6 +5,7 @@
 $blue: #2185c5;
 $green: #cdff00;
 $pink: #ff3b77;
+$pink-orange: #ff7f66;
 $grey-med: #52656b;
 $gt: 1.618;
 
@@ -28,7 +29,7 @@ $gt: 1.618;
 }
 
 section.mentors {
-  @include background-splash("img/mentors-bg.jpg", $pink);
+  @include background-splash("img/mentors-bg.jpg", $pink-orange);
   height: 40%;
 }
 

@@ -25,12 +25,12 @@ Router.onAfterAction(function () {
 });
 
 
-Router.route('mentors', {
-  name: 'mentors',
-  controller: 'MentorsController',
-  action: 'action',
-  where: 'client'
-});
+// Router.route('mentors', {
+//   name: 'mentors',
+//   controller: 'MentorsController',
+//   action: 'action',
+//   where: 'client'
+// });
 
 Router.route('challenge', {
   name: 'challenge',
