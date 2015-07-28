@@ -88,8 +88,13 @@ section.page-slogan2 {
 // -----------------------------------
 
 section.page-dates-overview {
-  min-height: 45%;
+  min-height: 100%;
   background: $pink;
+}
+
+.dates-overview-img {
+  width: 200px;
+  height: auto;
 }
 
 // -----------------------------------
