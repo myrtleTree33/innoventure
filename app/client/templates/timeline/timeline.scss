@@ -31,6 +31,14 @@ section.timeline {
   height: 40%;
 }
 
+.bottom-bar {
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  margin-bottom: 0px;
+  background-color: $blue;
+}
+
 
 /**
  * Timeline resource code adapted from

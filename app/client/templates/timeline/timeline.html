@@ -1,4 +1,26 @@
 <template name="Timeline">
+    <div class="sticky">
+      <nav class="bottom-bar" data-topbar role="navigation" data-options="sticky_on: large">
+        <section class="top-bar-section">
+          <!-- Right Nav Section -->
+          <ul class="right">
+            <li class="active"><a href="#">Right Button Active</a></li>
+            <li class="has-dropdown">
+              <a href="#">Right Button Dropdown</a>
+              <ul class="dropdown">
+                <li><a href="#">First link in dropdown</a></li>
+                <li class="active"><a href="#">Active link in dropdown</a></li>
+              </ul>
+            </li>
+          </ul>
+
+          <!-- Left Nav Section -->
+          <ul class="left">
+            <li><a href="#">Left Nav Button</a></li>
+          </ul>
+        </section>
+      </nav>
+    </div>
   <section class="timeline valign-wrapper flex-center">
     <div class="row">
       <div class="large-12 columns center-text">
@@ -14,9 +36,9 @@
       </div>
       <div class="cd-timeline-content">
         <h2>Registration opens</h2>
-<p>
-  Sign up online <a href="#">here</a>.
-</p>
+        <p>
+          Sign up online <a href="#">here</a>.
+        </p>
         <span class="cd-date">Aug 12</span>
       </div>
     </div>
@@ -28,9 +50,9 @@
       </div>
       <div class="cd-timeline-content">
         <h2>Networking Session</h2>
-<p>
-  Meet mentors and find potential teammates.  Come right by to find out more about the competition.
-</p>
+        <p>
+          Meet mentors and find potential teammates. Come right by to find out more about the competition.
+        </p>
         <span class="cd-date">Aug 24</span>
       </div>
     </div>
@@ -113,7 +135,7 @@
       <div class="cd-timeline-content">
         <h2>Demo Day</h2>
         <p>
-          Finalists show off their apps.  Are you all set?
+          Finalists show off their apps. Are you all set?
         </p>
         <span class="cd-date">Mar 2016</span>
       </div>
