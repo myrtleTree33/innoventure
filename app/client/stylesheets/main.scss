@@ -130,7 +130,6 @@ img { -ms-interpolation-mode: bicubic; image-rendering: -moz-crisp-edges; }
 
   div.nav {
     min-width: 100%;
-    background: #222;
   }
 
   .row {
@@ -138,17 +137,27 @@ img { -ms-interpolation-mode: bicubic; image-rendering: -moz-crisp-edges; }
   }
 }
 
+.nav-logo {
+  height: 3em;
+  width: auto;
+  margin: 0.7em;
+}
+
 /* For laptops and tablets */
 @media only screen  and (min-width : 1224px) {
+  body {
+    overflow-x: hidden;
+  }
+
   div.nav {
-    z-index: 9998;
-    position: absolute;
+    // z-index: 9998;
+    // position: absolute;
     min-width: 100%;
   }
 
   .top-bar {
-    padding-bottom: #{$pt * 2}em;
-    border-bottom:1px solid #fff;
+    // padding-bottom: #{$pt * 2}em;
+    // border-bottom:1px solid #fff;
   }
 }
 
@@ -251,7 +260,7 @@ a.footer-link {
 }
 
 .font-footer {
-  font-size: 1.4em;
+  font-size: 2.1em;
 }
 
 @import "../templates/home/home";

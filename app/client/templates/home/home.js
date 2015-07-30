@@ -101,12 +101,12 @@ Template.Home.rendered = function() {
 
   // Capture scroll events
   $(window).scroll(function() {
-    elemCountUp('#stats-teams', 'stats-teams', 0, 7, 5);
-    elemCountUp('#stats-hours', 'stats-hours', 0, 160, 5);
-    elemCountUp('#stats-prizes', 'stats-prizes', 0, 16, 5);
-    elemCountUp('#stats-awards', 'stats-awards', 0, 4, 5);
-    elemCountUp('#stats-terms', 'stats-terms', 0, 2, 5);
-    elemCountUp('#stats-startups', 'stats-startups', 0, 1, 5);
+    // elemCountUp('#stats-teams', 'stats-teams', 0, 7, 5);
+    // elemCountUp('#stats-hours', 'stats-hours', 0, 160, 5);
+    // elemCountUp('#stats-prizes', 'stats-prizes', 0, 16, 5);
+    // elemCountUp('#stats-awards', 'stats-awards', 0, 4, 5);
+    // elemCountUp('#stats-terms', 'stats-terms', 0, 2, 5);
+    // elemCountUp('#stats-startups', 'stats-startups', 0, 1, 5);
     watchAnim('.slogan2', 'fadeIn');
     watchAnim('.header-bootcamps', 'fadeInUp');
     watchAnim('.header-launch', 'fadeInUp');
