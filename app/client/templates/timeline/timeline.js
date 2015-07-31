@@ -16,6 +16,32 @@ Template.Timeline.created = function() {};
 Template.Timeline.rendered = function() {
   $(document).ready(function() {
 
+    function isElementInViewport(elem) {
+      var $elem = $(elem);
+      // Get the scroll position of the page.
+      var scrollElem = ((navigator.userAgent.toLowerCase().indexOf('webkit') != -1) ? 'body' : 'html');
+      var viewportTop = $(scrollElem).scrollTop();
+      var viewportBottom = viewportTop + $(window).height();
+      // Get the position of the element on the page.
+      var elemTop = Math.round($elem.offset().top);
+      var elemBottom = elemTop + $elem.height();
+      return ((elemTop < viewportBottom) && (elemBottom > viewportTop));
+    }
+
+    function select(selector) {
+      $('.events').addClass('info');
+      $(selector).removeClass('info');
+
+    }
+
+    function ifEventInView(selector, btnSelector) {
+      if (!isElementInViewport(selector)) {
+        return;
+      }
+      select(btnSelector);
+    }
+
+
     var timelineBlocks = $('.cd-timeline-block'),
       offset = 0.8;
 
@@ -29,6 +55,16 @@ Template.Timeline.rendered = function() {
       }, 100): window.requestAnimationFrame(function() {
         showBlocks(timelineBlocks, offset);
       });
+
+      // for the nav bar below
+      ifEventInView('.event-0-top', '.event-0');
+      ifEventInView('.event-1-top', '.event-1');
+      ifEventInView('.event-2-top', '.event-2');
+      ifEventInView('.event-3-top', '.event-3');
+      ifEventInView('.event-4-top', '.event-4');
+      ifEventInView('.event-5-top', '.event-5');
+      ifEventInView('.event-6-top', '.event-6');
+      ifEventInView('.event-7-top', '.event-7');
     });
 
     function hideBlocks(blocks, offset) {
@@ -43,6 +79,7 @@ Template.Timeline.rendered = function() {
       });
     }
   });
+
 };
 
 
