@@ -40,6 +40,12 @@ section.timeline {
   min-width: 100%;
 }
 
+/* For mobile */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+  .events {
+    visibility: hidden;
+  }
+}
 
 /**
  * Timeline resource code adapted from

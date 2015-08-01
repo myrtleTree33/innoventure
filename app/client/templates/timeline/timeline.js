@@ -6,7 +6,9 @@ Template.Timeline.events({});
 /*****************************************************************************/
 /* Timeline: Helpers */
 /*****************************************************************************/
-Template.Timeline.helpers({});
+Template.Timeline.helpers({
+
+});
 
 /*****************************************************************************/
 /* Timeline: Lifecycle Hooks */
@@ -15,6 +17,8 @@ Template.Timeline.created = function() {};
 
 Template.Timeline.rendered = function() {
   $(document).ready(function() {
+
+
 
     function isElementInViewport(elem) {
       var $elem = $(elem);
@@ -41,13 +45,6 @@ Template.Timeline.rendered = function() {
       select(btnSelector);
     }
 
-
-    var timelineBlocks = $('.cd-timeline-block'),
-      offset = 0.8;
-
-    //hide timeline blocks which are outside the viewport
-    hideBlocks(timelineBlocks, offset);
-
     //on scolling, show/animate timeline blocks when enter the viewport
     $(window).on('scroll', function() {
       (!window.requestAnimationFrame) ? setTimeout(function() {
@@ -56,15 +53,18 @@ Template.Timeline.rendered = function() {
         showBlocks(timelineBlocks, offset);
       });
 
-      // for the nav bar below
-      ifEventInView('.event-0-top', '.event-0');
-      ifEventInView('.event-1-top', '.event-1');
-      ifEventInView('.event-2-top', '.event-2');
-      ifEventInView('.event-3-top', '.event-3');
-      ifEventInView('.event-4-top', '.event-4');
-      ifEventInView('.event-5-top', '.event-5');
-      ifEventInView('.event-6-top', '.event-6');
-      ifEventInView('.event-7-top', '.event-7');
+      // mobile
+      if ($(window).width() > 320 && $(window).width() < 480) {} else {
+        // for the nav bar below
+        ifEventInView('.event-0-top', '.event-0');
+        ifEventInView('.event-1-top', '.event-1');
+        ifEventInView('.event-2-top', '.event-2');
+        ifEventInView('.event-3-top', '.event-3');
+        ifEventInView('.event-4-top', '.event-4');
+        ifEventInView('.event-5-top', '.event-5');
+        ifEventInView('.event-6-top', '.event-6');
+        ifEventInView('.event-7-top', '.event-7');
+      }
     });
 
     function hideBlocks(blocks, offset) {
@@ -78,6 +78,13 @@ Template.Timeline.rendered = function() {
         ($(this).offset().top <= $(window).scrollTop() + $(window).height() * offset && $(this).find('.cd-timeline-img').hasClass('is-hidden')) && $(this).find('.cd-timeline-img, .cd-timeline-content').removeClass('is-hidden').addClass('bounce-in');
       });
     }
+
+    var timelineBlocks = $('.cd-timeline-block'),
+      offset = 0.8;
+
+    //hide timeline blocks which are outside the viewport
+    hideBlocks(timelineBlocks, offset);
+
   });
 
 };

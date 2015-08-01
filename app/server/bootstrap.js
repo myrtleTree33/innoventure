@@ -17,7 +17,7 @@ function loadTwitter() {
   });
 
   twitter.stream('statuses/filter', {
-    track: 'singapore'
+    track: 'nusinnoventure'
   }, function(stream) {
     stream.on('data', function(tweet) {
       console.log(tweet);
