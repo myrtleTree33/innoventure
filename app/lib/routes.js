@@ -52,3 +52,11 @@ Router.route('timeline', {
   action: 'action',
   where: 'client'
 });
+
+
+Router.route('past_events', {
+  name: 'pastEvents',
+  controller: 'PastEventsController',
+  action: 'action',
+  where: 'client'
+});

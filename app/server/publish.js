@@ -20,3 +20,7 @@ Meteor.publish('contact', function (/* args */) {
 Meteor.publish('timeline', function (/* args */) {
   return Timeline.find();
 });
+
+Meteor.publish('past-events', function (/* args */) {
+  return PastEvents.find();
+});
