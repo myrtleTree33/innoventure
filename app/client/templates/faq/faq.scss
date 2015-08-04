@@ -19,13 +19,13 @@ $gt: 1.618;
 @mixin background-splash($filepath, $fallback-color) {
   background-image: url($filepath);
   background-repeat: no-repeat;
-  background-position: 50% 25%;
+  background-position: 0% 40%;
   background-size: cover;
   background-color: $fallback-color;
 }
 
 section.faq {
-  @include background-splash("img/timeline.jpg", $green);
+  @include background-splash("img/faq-bg.jpg", $pink);
   height: 40%;
 }
 

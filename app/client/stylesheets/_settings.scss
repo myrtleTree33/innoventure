@@ -344,7 +344,7 @@ $black       : #000000;
 // $accordion-navigation-padding: rem-calc(16);
 $accordion-navigation-bg-color: $oil;
 $accordion-navigation-hover-bg-color: scale-color($accordion-navigation-bg-color, $lightness: -5%);
-// $accordion-navigation-active-bg-color: scale-color($accordion-navigation-bg-color, $lightness: -3%);
+$accordion-navigation-active-bg-color: scale-color($blue, $lightness: -3%);
 // $accordion-navigation-active-font-color: $jet;
 $accordion-navigation-font-color: $white;
 // $accordion-navigation-font-size: rem-calc(16);
