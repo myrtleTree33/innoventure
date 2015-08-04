@@ -60,3 +60,10 @@ Router.route('past_events', {
   action: 'action',
   where: 'client'
 });
+
+Router.route('faq', {
+  name: 'faq',
+  controller: 'FaqController',
+  action: 'action',
+  where: 'client'
+});

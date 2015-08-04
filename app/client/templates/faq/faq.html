@@ -1,0 +1,32 @@
+<template name="Faq">
+  <section class="faq valign-wrapper flex-center">
+    <div class="row">
+      <div class="large-12 columns center-text">
+        <h1 class="text-white">FAQ</h1>
+      </div>
+    </div>
+  </section>
+  <div class="faq-content">
+    <div class="row">
+      <div class="large-12 columns">
+        <div class="margin-med">
+          &nbsp;
+        </div>
+        <ul class="accordion" data-accordion>
+          {{#each faqs}} {{> faqItem}} {{/each}}
+        </ul>
+        <div class="margin-med">
+          &nbsp;
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+<template name="faqItem">
+  <li class="accordion-navigation">
+    <a href="#{{ref}}">{{qn}}</a>
+    <div id="{{ref}}" class="content">
+      {{{ans}}}
+    </div>
+  </li>
+</template>

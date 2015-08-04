@@ -24,3 +24,7 @@ Meteor.publish('timeline', function (/* args */) {
 Meteor.publish('past-events', function (/* args */) {
   return PastEvents.find();
 });
+
+Meteor.publish('faq', function (/* args */) {
+  return Faq.find();
+});

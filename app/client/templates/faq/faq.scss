@@ -1,5 +1,5 @@
 /*****************************************************************************/
-/* PastEvents: Style */
+/* Faq: Style */
 /*****************************************************************************/
 
 $blue: #2185c5;
@@ -24,12 +24,12 @@ $gt: 1.618;
   background-color: $fallback-color;
 }
 
-section.past-events {
+section.faq {
   @include background-splash("img/timeline.jpg", $green);
   height: 40%;
 }
 
-section.past-events-content {
+section.faq-content {
   background: #fff;
   min-height: 70%;
 }
