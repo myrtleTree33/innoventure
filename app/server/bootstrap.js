@@ -72,7 +72,7 @@ function generateFaqs() {
   ];
   Faq.remove({});
   _.each(faqs, function(faq, ref) {
-    faq.ref = 'faq-item-' + ref;
+    faq.ref = ref;
     Faq.insert(faq);
   });
 };
