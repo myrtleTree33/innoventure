@@ -19,7 +19,7 @@ section.page {
 }
 
 section.page-leader {
-  @include background-splash('img/cover.jpg', $blue);
+  // @include background-splash('img/cover.jpg', $blue);
   min-height: 80%;
   padding-top: #{2 * $pt}em;
 }

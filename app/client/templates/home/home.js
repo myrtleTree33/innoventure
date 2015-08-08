@@ -32,6 +32,14 @@ Template.Home.created = function() {
 
 Template.Home.rendered = function() {
 
+  // mobile
+  if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+    $('.page-leader').css('background', '#2185c5');
+    // desktop
+  } else {
+    $('.page-leader').vide('cover');
+  }
+
   $('.leader-slogan-text').typed({
     strings: ["Design ^100 / Create ^100 / Disrupt"],
     typeSpeed: 10
