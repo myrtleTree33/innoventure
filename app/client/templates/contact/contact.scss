@@ -49,6 +49,31 @@ section.contact-content {
   min-height: 70%;
 }
 
+.crop-circle {
+    border-radius: 100%;
+    background: #eee no-repeat center;
+    background-size: cover;
+}
+
+.icon-med {
+    width: 200px;
+    height: 200px;
+}
+
+.icon-small {
+    width: 100px;
+    height: 100px;
+}
+
+.profile-1 {
+    background-image: url("img/profiles/profile-mock.png");
+}
+
+.mentor-footer {
+  font-size: 1.7em;
+  margin: 0 0.15em;
+}
+
 a.sns {
   @include style-link(#000,#000,$yellow,$yellow);
 }
