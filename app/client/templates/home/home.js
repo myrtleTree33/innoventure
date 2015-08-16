@@ -32,6 +32,11 @@ Template.Home.created = function() {
 
 Template.Home.rendered = function() {
 
+  analytics.track("Bought Ticket", {
+  eventName: "Wine Tasting",
+  couponValue: 50,
+});
+
   // mobile
   if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
     $('.page-leader').css('background', '#2185c5');

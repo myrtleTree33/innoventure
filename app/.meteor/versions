@@ -46,6 +46,7 @@ mongo@1.1.0
 natestrauser:animate-css@3.2.6
 new3rs:twitter@0.0.3
 observe-sequence@1.0.6
+okgrow:analytics@0.3.0
 ordered-dict@1.0.3
 random@1.0.3
 reactive-dict@1.1.0
