@@ -68,3 +68,10 @@ Router.route('faq', {
   action: 'action',
   where: 'client'
 });
+
+// Router.route('/registerme', {where: 'server'}).get(function() {
+//   this.response.writeHead(302, {
+//     'Location': "https://www.google.com/" // replace with link to tegistration form
+//   });
+//   this.response.end();
+// });
