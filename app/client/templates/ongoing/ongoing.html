@@ -1,0 +1,26 @@
+<template name="Ongoing">
+  <section class="ongoing valign-wrapper flex-center">
+    <div class="row">
+      <div class="large-12 columns center-text">
+        <h1 class="text-white">Downloads</h1>
+        <h3 class="text-white">{{> loginButtons}}</h3>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact-content valign-wrapper flex-center">
+    <div>
+      <div class="margin-med">
+        &nbsp;
+      </div>
+      <div class="row">
+        <div class="large-12 columns center-text">
+          {{#if currentUser}}
+          <h1>Private Section</h1> -
+          <p>Only visible if you're logged in</p>
+          {{/if}}
+        </div>
+      </div>
+    </div>
+  </section>
+</template>

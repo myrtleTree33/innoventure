@@ -75,3 +75,11 @@ Router.route('/registerme', {where: 'server'}).get(function() {
   });
   this.response.end();
 });
+
+
+Router.route('ongoing', {
+  name: 'ongoing',
+  controller: 'OngoingController',
+  action: 'action',
+  where: 'client'
+});

@@ -28,3 +28,7 @@ Meteor.publish('past-events', function (/* args */) {
 Meteor.publish('faq', function (/* args */) {
   return Faq.find();
 });
+
+Meteor.publish('ongoing', function (/* args */) {
+  return Ongoing.find();
+});

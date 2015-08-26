@@ -1,0 +1,32 @@
+/*****************************************************************************/
+/* Ongoing: Style */
+/*****************************************************************************/
+.ongoing {
+}
+
+$blue: #2185c5;
+$green: #cdff00;
+$pink: #ff3b77;
+$green: #105B63;
+$grey-med: #52656b;
+$gt: 1.618;
+
+
+@mixin box-shadow($top, $left, $blur, $color, $inset:"") {
+  -webkit-box-shadow: $top $left $blur $color #{$inset};
+  -moz-box-shadow: $top $left $blur $color #{$inset};
+  box-shadow: $top $left $blur $color #{$inset};
+}
+
+@mixin background-splash($filepath, $fallback-color) {
+  background-image: url($filepath);
+  background-repeat: no-repeat;
+  background-position: 50% 25%;
+  background-size: cover;
+  background-color: $fallback-color;
+}
+
+section.ongoing {
+  @include background-splash("img/timeline.jpg", $green);
+  height: 40%;
+}
