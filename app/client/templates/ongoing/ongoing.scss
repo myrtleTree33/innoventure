@@ -30,3 +30,11 @@ section.ongoing {
   @include background-splash("img/timeline.jpg", $green);
   height: 40%;
 }
+
+#signup-link {
+  visibility: hidden;
+}
+
+#forgot-password-link {
+  visibility: hidden;
+}

@@ -21,3 +21,4 @@ spectrum:photoswipe
 okgrow:analytics
 accounts-ui
 accounts-password
+zuuk:stale-session
