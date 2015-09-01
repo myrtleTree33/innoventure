@@ -71,7 +71,7 @@ Router.route('faq', {
 
 Router.route('/registerme', {where: 'server'}).get(function() {
   this.response.writeHead(302, {
-    'Location': "http://goo.gl/forms/fVW9YsGg1e" // replace with link to tegistration form
+    'Location': "http://goo.gl/forms/1FLz8qkdnO" // replace with link to tegistration form
   });
   this.response.end();
 });
