@@ -69,12 +69,20 @@ Router.route('faq', {
   where: 'client'
 });
 
-Router.route('/registerme', {where: 'server'}).get(function() {
+
+var externalRoutes = {
+  'registerme': 'http://goo.gl/forms/1FLz8qkdnO',
+  'grouping': 'https://drive.google.com/open?id=1Pe-9Mkm0PwlvgY78eJgPhCcrvfNTv_7pfHISDacO1nM',
+};
+
+for (var key in externalRoutes) {
+Router.route(key, {where: 'server'}).get(function() {
   this.response.writeHead(302, {
-    'Location': "http://goo.gl/forms/1FLz8qkdnO" // replace with link to tegistration form
+    'Location': externalRoutes[key] // replace with link to tegistration form
   });
   this.response.end();
 });
+}
 
 
 Router.route('ongoing', {
