@@ -73,6 +73,8 @@ Router.route('faq', {
 var externalRoutes = {
   'registerme': 'http://goo.gl/forms/1FLz8qkdnO',
   'grouping': 'https://drive.google.com/open?id=1Pe-9Mkm0PwlvgY78eJgPhCcrvfNTv_7pfHISDacO1nM',
+  'qa': 'https://hackpad.com/InnoVenture-Q-A-Links-E0laqjg4nvc'
+
 };
 
 for (var key in externalRoutes) {
