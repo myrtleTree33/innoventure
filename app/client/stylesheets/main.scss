@@ -61,6 +61,7 @@ $yellow: #ffe11a;
 $light-grey: #ccc;
 
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:300,400);
+@import url(https://fonts.googleapis.com/css?family=Roboto+Slab:400,300);
 
 @mixin set-text {
   font-family: 'Open Sans';
@@ -261,6 +262,17 @@ a.footer-link {
 
 .font-footer {
   font-size: 2.1em;
+}
+
+.demo-header {
+  background-color: $pink;
+  padding: 1em;
+  font-family: "Roboto Slab";
+  font-weight: 300;
+  display: inline-block;
+  color: #fff;
+  border-radius: 5px;
+  border: 2px dashed #fff;
 }
 
 @import "../templates/home/home";
