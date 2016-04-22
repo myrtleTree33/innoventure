@@ -14,5 +14,10 @@
   "route": {
     "controller": true,
     "template": true
+  },
+
+  "mup": {
+    "version": "mupx",
+    "environment": "/home/joel/.nvm/v0.12.4/bin/mupx"
   }
 }
