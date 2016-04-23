@@ -1,0 +1,41 @@
+{
+  "public": {
+    "analyticsSettings": {
+      "Google Analytics": {
+        "trackingId": ""
+      },
+      "Mixpanel": {
+        "token": "your token",
+        "people": true
+      },
+      "KISSmetrics": {
+        "apiKey": "your api key"
+      },
+      "UserVoice": {
+        "apiKey": "your api key"
+      },
+      "Sentry": {
+        "config": "your config key"
+      },
+      "Segment.io": {
+        "apiKey": "your api key"
+      },
+      "Keen IO": {
+        "projectId": "your project id",
+        "writeKey": "your write key"
+      }
+    }
+  },
+  "twitter_consumer_key": "",
+  "twitter_consumer_secret": "",
+  "twitter_access_token": "",
+  "twitter_access_token_secret": "",
+  "twitter_id": "",
+  "twitter_category": "nus",
+  "twitter_link": "https://twitter.com/cc",
+  "twitter_refresh_interval": 5000,
+  "twitter_screen_name": "",
+  "member_email": "",
+  "member_username": "",
+  "member_password": ""
+}
