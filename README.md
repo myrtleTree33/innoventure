@@ -45,8 +45,9 @@ InnoVenture uses `iron-cli`, which wraps and scaffolds Meteor into an organizabl
   - `config/production/settings.json.copy`
   - `config/production/mup.json.copy`
 
-- Then, proceed to use separate keys.
-    
+- Then, populate the keys.  Alternately, these can be obtained from Prof. Vinod.
+
+
 ## Uploading remote site
 
 - InnoVenture uses `mupx` for uploading to a remote site.  This avoids the need to configure the server manually, and can be run on your current development machine.
@@ -54,3 +55,19 @@ InnoVenture uses `iron-cli`, which wraps and scaffolds Meteor into an organizabl
 - Ensure that you have the required `mup.json` defined in `config/production/mup.json`.  Then run
 
     $ iron mup prod
+
+
+## Bugs
+
+Please use the bug-tracker provided on this site.
+
+
+## Credit
+
+Done for and behalf of NUS InnoVenture by:
+
+- TONG Haowen Joel
+- Computer Engineering, Year 4
+- National University of Singapore
+- `me at joeltong dot org`
+- www.joeltong.org
